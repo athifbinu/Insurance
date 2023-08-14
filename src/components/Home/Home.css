@@ -1,0 +1,73 @@
+.home-section{
+    background-color: rgba(233, 233, 233, 0.747);
+    width: 100%;
+
+
+}
+
+.generel{
+    background-color: #fff;
+    margin: 20px;
+    width: 70%;
+ 
+}
+.generel input{
+    width: 350px;
+    border-radius: 5px;
+    padding: 6px;
+}
+.form-data{
+     display: flex;
+     padding: 10px;
+     line-height: 27px;
+}
+.note{
+    padding: 10px;
+    border: 10px;
+}
+
+.contact-form-textarea
+{
+    width: 92%;
+    height: 35px;
+    color: #000;
+    border: 1px solid #bcbcbc;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    
+}
+.contact-form-textarea::placeholder
+{
+    color: #aaa;
+
+}
+.travel-section{
+    background-color: #fff;
+    margin: 20px;
+    width: 70%;
+}
+.travel-right {
+    /* Add your styles for the main container here */
+  }
+  .travel-right label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .travel-right input{
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+  }
+
+  
+
+
+
+
+
+
