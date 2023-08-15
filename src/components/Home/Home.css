@@ -1,73 +1,215 @@
-.home-section{
-    background-color: rgba(233, 233, 233, 0.747);
-    width: 100%;
-
-
+.home-section {
+  background-color: rgba(233, 233, 233, 0.747);
+  width: 100%;
 }
 
-.generel{
-    background-color: #fff;
-    margin: 20px;
-    width: 70%;
- 
+.generel {
+  background-color: #fff;
+  margin: 20px;
+  width: 70%;
+  display: block;
 }
-.generel input{
-    width: 350px;
-    border-radius: 5px;
-    padding: 6px;
+.generel input {
+  width: 350px;
+  border-radius: 5px;
+  padding: 6px;
+  border: 1px solid #bcbcbc;
 }
-.form-data{
-     display: flex;
-     padding: 10px;
-     line-height: 27px;
+.form-data {
+  display: flex;
+  padding: 10px;
+  line-height: 27px;
 }
-.note{
-    padding: 10px;
-    border: 10px;
-}
-
-.contact-form-textarea
-{
+.right button{
     width: 92%;
-    height: 35px;
-    color: #000;
-    border: 1px solid #bcbcbc;
-    border-radius: 10px;
-    outline: none;
-    margin-bottom: 20px;
-    padding: 15px;
-    
-}
-.contact-form-textarea::placeholder
-{
-    color: #aaa;
-
-}
-.travel-section{
-    background-color: #fff;
-    margin: 20px;
-    width: 70%;
-}
-.travel-right {
-    /* Add your styles for the main container here */
-  }
-  .travel-right label{
-    display: block;
-    margin-bottom: 5px;
+    height: 27px;
+    background-color: #ccc;
+    color: #fff;
     font-weight: bold;
-  }
-  .travel-right input{
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: none;
+    border-radius: 7px;
+    margin-top: 10px;
+}
 
-  }
+.note {
+  padding: 10px;
+  border: 10px;
+}
 
-  
+.contact-form-textarea {
+  width: 92%;
+  height: 35px;
+  color: #000;
+  border: 1px solid #bcbcbc;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.contact-form-textarea::placeholder {
+  color: #aaa;
+}
+.left{
+    position: relative;
+}
+.close{
+    position: absolute;
+    margin-left: -42px;
+    color: red;
+}
 
 
 
+.travel-section {
+  background-color: #fff;
+  margin: 20px;
+  width: 70%;
+}
+.travel-form {
+  display: flex;
+  padding: 20px;
+}
 
+.travel-right {
+  /* Add your styles for the main container here */
+}
+.travel-right label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.travel-right input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.travel-right button {
+  font-weight: bold;
+  height: 32px;
+  width: 100%;
+}
 
+.travel-btn {
+  padding: 21px;
+}
+.travel-btn button {
+  height: 26px;
+  text-align: start;
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
 
+.destination-btn {
+  width: 135px;
+}
+.from-btn {
+  width: 60px;
+}
+.to-btn {
+  width: 35px;
+}
+.duration-btn {
+  width: 70px;
+}
+.actions-btn {
+  width: 68px;
+}
+
+.beneficiry-section {
+  background-color: #fff;
+  margin: 20px;
+  width: 70%;
+}
+
+.beni-form {
+  padding: 19px;
+  line-height: 25px;
+}
+
+.check-sections {
+  gap: 86px;
+}
+.check-sections p {
+  font-size: 14px;
+}
+
+.dot-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.dot-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /* Make it round */
+  background-color: #eee; /* Unchecked background color */
+  border: 2px solid #ccc; /* Border style */
+}
+
+.dot-checkbox input:checked ~ .dot {
+  background-color: #007bff; /* Checked background color */
+  border-color: #007bff;
+}
+
+.search input {
+  width: 310px;
+  padding: 6px;
+}
+
+.name-section {
+  gap: 8px;
+}
+.name-section input {
+  height: 25px;
+  font-size: 18px;
+  width: 155px;
+  border: 1px solid #bcbcbc;
+}
+.name-section label {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+.back-btn button {
+  height: 26px;
+  margin-top: 16px;
+  width: 48px;
+}
+
+.quotation-section {
+  display: block;
+  margin-top: 20px;
+}
+
+.box-1,
+.box-2 {
+  width: 303px;
+  height: 27px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.box-1 {
+  background-color: #e2e0e0;
+}
+.box-1 p {
+  margin-top: 3px;
+  font-family: sans-serif;
+}
+.box-2{
+    background-color: #fff;
+}

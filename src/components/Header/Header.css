@@ -3,7 +3,7 @@ header{
     justify-content: space-between;
 }
 .logo-section{
-    gap: 10px;
+    gap: 5px;
     padding: 10px;
     align-items: center;
 }
@@ -12,11 +12,13 @@ header{
 }
 .last-section{
     align-items: center;
-    gap: 15px;
+    gap: 10px;
    
 }
 .last-section img{
     width: 35px;
 }
+
+
 
 

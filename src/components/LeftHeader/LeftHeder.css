@@ -2,7 +2,8 @@
   background-color:#445c63 ;
     width: 70px;
     height: auto;
-    height: 540px;
+    overflow: hidden;
+
 
 }
 .icons{
