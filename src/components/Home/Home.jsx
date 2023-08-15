@@ -1,18 +1,19 @@
 import React from "react";
 import "./Home.css";
 import { AiFillQuestionCircle } from "react-icons/ai";
-import {IoIosClose} from "react-icons/io"
-import {MdArrowDropDown} from "react-icons/md"
+import { IoIosClose } from "react-icons/io";
+import { MdArrowDropDown } from "react-icons/md";
+import { BsArrowRight } from "react-icons/bs";
+import Brazil from "../../assets/brazil.png"
 
 const Home = () => {
   return (
     <div className="home-section">
-      <h1>Add Travel Certificate</h1>
+      <h2 style={{marginLeft:"19px",marginTop:"18px"}}>Add Travel Certificate</h2>
       <div className="flex">
         <div className="generel">
           <h2>General information</h2>
           <hr />
-
           <div className="form-data">
             <div className="left">
               <div>
@@ -20,44 +21,70 @@ const Home = () => {
                 <input type="text" placeholder="Gold" />
 
                 <span>
-                <IoIosClose size={30} className="close"/>
-                 <MdArrowDropDown size={20} style={{position:"absolute",
-                 marginLeft:"-20px",marginTop:"4px"}}/>
+                  <IoIosClose size={30} className="close" />
+                  <MdArrowDropDown
+                    size={20}
+                    style={{
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "4px",
+                    }}
+                  />
                 </span>
               </div>
-
-
 
               <div>
                 <label>Country of Residence</label>
                 <input type="text" placeholder="United Arab Emirates" />
 
                 <span>
-                <IoIosClose size={30} className="close"/>
-                <MdArrowDropDown size={20} style={{position:"absolute",
-                 marginLeft:"-20px",marginTop:"4px"}}/>
+                  <IoIosClose size={30} className="close" />
+                  <MdArrowDropDown
+                    size={20}
+                    style={{
+                      position: "absolute",
+                      marginLeft: "-20px",
+                      marginTop: "4px",
+                    }}
+                  />
                 </span>
               </div>
             </div>
 
             <div className="right">
-              <div >
-                <label>Email</label>
-                <span>
-                  <h1>etst</h1>
+              <div>
+                <span
+                  style={{
+                    width: "27px",
+                    height: "27px",
+                    backgroundColor: "#ccc",
+                    position: "absolute",
+                    marginTop: "28px",
+                  }}
+                >
+                  <BsArrowRight style={{ padding: "4px" }} />
                 </span>
-                <input type="text"  />
-
+                <label>Email</label>
+                <input type="text" />
               </div>
+
+
+
+
 
               <div>
                 <label>Phone Number</label>
-                <input type="text"  />
+                <input type="text" />
+
+                <span className="flex" style={{alignItems:"center",marginTop:"-28px",marginLeft:"5px"}}>
+                   <img style={{width:"26px",}} src={Brazil} alt="" />
+                    <MdArrowDropDown/>
+                </span>
               </div>
 
               <button>+Add Phone</button>
-                <br />
-                <br />
+              <br />
+              <br />
               <input type="number" placeholder="Phone Number" />
 
               <div>
@@ -74,19 +101,21 @@ const Home = () => {
         </div>
 
         <div className="quotation-section">
-      <div className="box-1">
-        <p>Quotation</p>
-      </div>
-      <div className="box-2"></div>
-    </div>
-
+          <div className="box-1">
+            <p>Quotation</p>
+          </div>
+          <div className="box-2"></div>
+        </div>
       </div>
 
       <div className="travel-section">
-        <h2>Travel</h2>
-        <hr />
 
         <div className="travel-form">
+        <h2>Travel</h2>
+        <br />
+        <hr />
+          <div className="flex" style={{marginTop:"18px"}}>
+          
           <div className="travel-right">
             <div>
               <label htmlFor="destination">Destination(s)</label>
@@ -121,12 +150,16 @@ const Home = () => {
               <button className="actions-btn">Actions</button>
             </div>
           </div>
+          </div>
+
+
         </div>
       </div>
 
       <div className="beneficiry-section">
         <div className="beni-form">
-          <h1>Benificiary</h1>
+        
+          <h2>Benificiary</h2>
           <hr />
           <div className="check-sections flex">
             <div className="flex" style={{ alignItems: "center", gap: "2px" }}>
@@ -200,6 +233,7 @@ const Home = () => {
           <div className="back-btn">
             <button>Back</button>
           </div>
+
         </div>
       </div>
     </div>

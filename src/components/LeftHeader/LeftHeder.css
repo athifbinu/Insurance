@@ -1,8 +1,11 @@
 .left-header{
   background-color:#445c63 ;
     width: 70px;
-    height: auto;
-    overflow: hidden;
+    /* position: fixed;
+    top: 70px;
+    left: 0;
+    height: 100vh;
+    z-index: 9999; */
 
 
 }
