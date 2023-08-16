@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import { AiFillQuestionCircle } from "react-icons/ai";
 import { IoIosClose } from "react-icons/io";
@@ -7,6 +7,8 @@ import { BsArrowRight } from "react-icons/bs";
 import Brazil from "../../assets/brazil.png"
 
 const Home = () => {
+
+  const [open,setOpen]=useState(false)
   return (
     <div className="home-section">
       <h2 style={{marginLeft:"19px",marginTop:"18px"}}>Add Travel Certificate</h2>
