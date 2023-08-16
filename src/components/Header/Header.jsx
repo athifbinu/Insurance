@@ -14,6 +14,7 @@ const Header = () => {
     <header className='flex'>
       <div className="logo-section flex">
         <img  src={logo} alt="" />
+    
         <p>HOME</p>
         <MdArrowForwardIos/>
         <p>CONTRACT</p>

@@ -158,9 +158,13 @@ const Home = () => {
 
       <div className="beneficiry-section">
         <div className="beni-form">
+
         
           <h2>Benificiary</h2>
+          <br />
           <hr />
+          <div style={{marginTop:"14px",lineHeight:"30px"}}>
+           <div style={{lineHeight:"38px"}}>
           <div className="check-sections flex">
             <div className="flex" style={{ alignItems: "center", gap: "2px" }}>
               <label className="dot-checkbox">
@@ -185,14 +189,14 @@ const Home = () => {
           </div>
 
           <div className="check-sections flex">
-            <div className="flex">
+            <div className="flex"style={{ alignItems: "center", gap: "2px" }} >
               <label className="dot-checkbox">
                 <input type="checkbox" />
                 <span className="dot"></span>
               </label>
               <p>Male</p>
             </div>
-            <div className="flex">
+            <div className="flex" style={{ alignItems: "center", gap: "2px",marginLeft:"24px" }}>
               <label className="dot-checkbox">
                 <input type="checkbox" />
                 <span className="dot"></span>
@@ -200,7 +204,7 @@ const Home = () => {
               <p>Female</p>
             </div>
           </div>
-
+          </div>
           <div className="name-section flex">
             <div>
               <label>First Name</label>
@@ -233,6 +237,10 @@ const Home = () => {
           <div className="back-btn">
             <button>Back</button>
           </div>
+
+          </div>
+          
+
 
         </div>
       </div>
