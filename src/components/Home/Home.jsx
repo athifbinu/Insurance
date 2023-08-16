@@ -10,11 +10,13 @@ const Home = () => {
   return (
     <div className="home-section">
       <h2 style={{marginLeft:"19px",marginTop:"18px"}}>Add Travel Certificate</h2>
+
       <div className="flex">
         <div className="generel">
+          <div className="form-data">
           <h2>General information</h2>
           <hr />
-          <div className="form-data">
+             <div className="flex">
             <div className="left">
               <div>
                 <label>Assistance Plan</label>
@@ -92,13 +94,16 @@ const Home = () => {
                 <input type="text" />
               </div>
             </div>
+
           </div>
 
           <div className="note">
             <label>Notes</label>
             <textarea class="contact-form-textarea"></textarea>
           </div>
+          </div>
         </div>
+
 
         <div className="quotation-section">
           <div className="box-1">
@@ -106,7 +111,9 @@ const Home = () => {
           </div>
           <div className="box-2"></div>
         </div>
+
       </div>
+      
 
       <div className="travel-section">
 
