@@ -54,14 +54,21 @@
 .left{
     position: relative;
 }
-.close{
-    position: absolute;
-    margin-left: -42px;
-    color: red;
-}
+
 .right-em{
   position: relative;
 }
+
+.email input{
+  width: 141%;
+  border-radius: 0;
+  font-weight: bold;
+  color: #000;
+}
+.email input::placeholder{
+  color: black;
+}  
+
 
 
 
@@ -235,3 +242,19 @@
 .box-2{
     background-color: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

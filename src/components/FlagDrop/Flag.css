@@ -1,0 +1,57 @@
+/* FlagSelectDropdown.css */
+.flag-select-dropdown {
+    position: relative;
+    width: 250px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .dropdown-icon {
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    flex: 1;
+  }
+  
+  .flag-options {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  .flag-option {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .flag-option img {
+    width: 20px;
+    margin-right: 8px;
+  }
+  
+  .selected {
+    background-color: #f0f0f0;
+  }
+  

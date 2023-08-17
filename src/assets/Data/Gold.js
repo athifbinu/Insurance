@@ -1,5 +1,5 @@
 
-export const Gold=[
+ const Gold=[
     {
         id:1,
         name:"Gold"
@@ -18,3 +18,5 @@ export const Gold=[
      },
 
 ]
+
+export default Gold

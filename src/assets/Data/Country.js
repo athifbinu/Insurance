@@ -13,7 +13,7 @@ import icon11 from "../flag.png"
 
 
 
-export const Country=[
+ const Country=[
     {
         id:1,
         name:"india",
@@ -72,3 +72,5 @@ export const Country=[
         Flag:icon11,
     },
 ]
+
+export default Country
