@@ -24,6 +24,8 @@ const Gold = () => {
     setIsopen(!isOpen)
   }
 
+  const [query,setQuery]=useState("")
+
   return (
     <div className="custom-dropdown">
       <div className="dropdown-header" onClick={GoldDropDown}>
@@ -45,29 +47,19 @@ const Gold = () => {
         <div className="search-input">
           <input
             type="text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value.toLowerCase())}
+             onChange={(e)=>setQuery(e.target.value)}
             className="input"
           />
         </div>
 
-        {goldData.map((country) => (
-          <li
-            key={country.name}
-            className={`option ${
-              country.name.toLowerCase() === selected.toLowerCase()
-                ? "selected"
-                : ""
-            } ${
-              country.name.toLowerCase().startsWith(inputValue)
-                ? "visible"
-                : "hidden"
-            }`}
-            onClick={() => handleSelect(country.name)}
-          >
-            {country.name}
-          </li>
-        ))}
+         {
+          goldData.filter((data)=>data.name.toLowerCase().includes(query))
+          .map((data)=>(
+             <li key={data.id}>
+               {data.name}
+             </li>
+          ))
+         }
       </ul>
     )
     }

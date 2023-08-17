@@ -9,7 +9,7 @@
   width: 70%;
   display: block;
 }
-.generel h2{
+.generel h2 {
   padding: 14px;
 }
 .generel input {
@@ -22,15 +22,15 @@
   padding: 10px;
   line-height: 27px;
 }
-.right button{
-    width: 92%;
-    height: 27px;
-    background-color: #505357;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 7px;
-    margin-top: 10px;
+.right button {
+  width: 92%;
+  height: 27px;
+  background-color: #505357;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 7px;
+  margin-top: 10px;
 }
 
 .note {
@@ -51,33 +51,23 @@
 .contact-form-textarea::placeholder {
   color: #aaa;
 }
-.left{
-    position: relative;
-}
-
-.right-em{
+.left {
   position: relative;
 }
 
-.email input{
+.right-em {
+  position: relative;
+}
+
+.email input {
   width: 141%;
   border-radius: 0;
   font-weight: bold;
   color: #000;
 }
-.email input::placeholder{
+.email input::placeholder {
   color: black;
-}  
-
-
-
-
-
-
-
-
-
-
+}
 
 .travel-section {
   background-color: #fff;
@@ -86,7 +76,6 @@
 }
 
 .travel-form {
-  
   padding: 20px;
 }
 
@@ -113,8 +102,6 @@
   border: none;
   border-radius: 3px;
 }
-
-
 
 .travel-btn {
   padding: 21px;
@@ -239,22 +226,6 @@
   margin-top: 3px;
   font-family: sans-serif;
 }
-.box-2{
-    background-color: #fff;
+.box-2 {
+  background-color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -7,6 +7,7 @@ import { BsArrowRight } from "react-icons/bs";
 import Brazil from "../../assets/brazil.png";
 
 import Gold from "../GoldDrop/Gold";
+import Flag from "../FlagDrop/Flag";
 
 const Home = () => {
   const [showAdvancedText, setShowAdvancedText] = useState(false);
@@ -19,7 +20,6 @@ const Home = () => {
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
-
 
   return (
     <div className="home-section">
@@ -34,14 +34,10 @@ const Home = () => {
             <hr />
             <div className="flex">
               <div className="left">
-
-
                 <div>
                   <label>Assistance Plan</label>
-                    <Gold/>
+                  <Gold />
                 </div>
-
-             
 
                 <div>
                   <label>Country of Residence</label>
@@ -58,6 +54,7 @@ const Home = () => {
                       }}
                     />
                   </span>
+                
                 </div>
               </div>
 
@@ -79,13 +76,17 @@ const Home = () => {
                     <label>Email</label>
                     <input
                       type="text"
-                      value={showAdvancedText ? "experiehnes@travellerschoice.ae" : inputValue}
+                      value={
+                        showAdvancedText
+                          ? "experiehnes@travellerschoice.ae"
+                          : inputValue
+                      }
                       onChange={handleInputChange}
                     />
                   </div>
                 </div>
 
-                 <div>
+                <div>
                   <label>Phone Number</label>
                   <input type="text" />
 
@@ -100,9 +101,7 @@ const Home = () => {
                     <img style={{ width: "26px" }} src={Brazil} alt="" />
                     <MdArrowDropDown />
                   </span>
-                </div> 
-
-          
+                </div>
 
                 <button>+Add Phone</button>
                 <br />

@@ -1,49 +1,60 @@
 import React, { useState } from 'react';
-import { MdArrowDropDown } from 'react-icons/md';
-import FlagImages from "../../assets/Data/Country"
 import "./Flag.css"
+
 const Flag = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [selectedFlag, setSelectedFlag] = useState(null);
-  
-    const toggleDropdown = () => {
-      setIsOpen(!isOpen);
-    };
-  
-    const handleFlagSelect = (flag) => {
-      setSelectedFlag(flag);
-      setIsOpen(false);
-    };
+  const [isActive, setIsActive] = useState(false);
+  const [selected, setIsSelected] = useState("Choose one");
+  function handleBlur(e) {
+    console.log(e);
+  }
+
+
   return (
-    <div className="flag-select-dropdown">
-    <div className="input-container">
-      <input
-        type="text"
-        placeholder="Select a flag"
-        readOnly
-        value={selectedFlag ? selectedFlag.name : ''}
+    <div className="dropdown">
+    <div
+      onClick={(e) => {
+        setIsActive(!isActive);
+      }}
+      className="dropdown-btn"
+    >
+      {selected}
+      <span
+        className={isActive ? "fas fa-caret-up" : "fas fa-caret-down"}
       />
-      <span className="dropdown-icon" onClick={toggleDropdown}>
-        <MdArrowDropDown size={20} />
-      </span>
     </div>
-    {isOpen && (
-      <ul className="flag-options">
-        {FlagImages.map((flag, index) => (
-          <li
-            key={index}
-            onClick={() => handleFlagSelect(flag)}
-            className={`flag-option ${
-              selectedFlag === flag ? 'selected' : ''
-            }`}
-          >
-            <img src={flag.image} alt={flag.name} />
-            {flag.name}
-          </li>
-        ))}
-      </ul>
-    )}
+    <div
+      className="dropdown-content"
+      style={{ display: isActive ? "block" : "none" }}
+    >
+      <div
+        onClick={(e) => {
+          setIsSelected(e.target.textContent);
+          setIsActive(!isActive);
+        }}
+        className="item"
+      >
+        One
+      </div>
+      <div
+        className="item"
+        onClick={(e) => {
+          setIsSelected(e.target.textContent);
+          setIsActive(!isActive);
+        }}
+      >
+        Two
+      </div>
+      <div
+        className="item"
+        onClick={(e) => {
+          setIsSelected(e.target.textContent);
+          setIsActive(!isActive);
+        }}
+      >
+        Three
+      </div>
+    </div>
   </div>
   );
 }
