@@ -17,6 +17,7 @@
   border-radius: 5px;
   padding: 6px;
   border: 1px solid #bcbcbc;
+  cursor: pointer;
 }
 .form-data {
   padding: 10px;
@@ -51,8 +52,12 @@
 .contact-form-textarea::placeholder {
   color: #aaa;
 }
-.left {
+.left{
   position: relative;
+  padding: 11px;
+}
+.right{
+  padding: 13px;
 }
 
 .right-em {
@@ -228,4 +233,26 @@
 }
 .box-2 {
   background-color: #fff;
+}
+.flag-list{
+  border: 1px solid #ccc;
+  /* border-top: none; */
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  position: absolute;
+  width: 38%;
+  padding: 8px;
+  height: 128px;
+  cursor: pointer;
+}
+.flag-list li{
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  gap: 10px;
+}
+.flag-list li:hover{
+  background-color: #ccc;
 }

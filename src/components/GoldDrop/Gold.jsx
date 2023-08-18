@@ -40,14 +40,13 @@ const Gold = () => {
       
 
       {isOpen && (
-        <ul className="options-list" style={{ position: "absolute" }}>
+        <ul className="options-liste">
           <div className="search-input">
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value.toLowerCase())}
               className="input"
-              placeholder="Search for a country..."
             />
           </div>
 

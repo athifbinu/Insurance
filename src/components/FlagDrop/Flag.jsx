@@ -6,20 +6,20 @@ const Flag = () => {
 
   const [selected, setSelected] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState("");
+
 
   // Function to handle selecting a country
   const handleSelect = (countryName) => {
     setSelected(countryName);
     setIsOpen(false); // Close the dropdown
-    setQuery(""); // Clear the search query
+  
   };
 
   // Function to toggle the dropdown open/close
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
     setSelected(""); // Clear the selected value
-    setQuery(""); // Clear the search query
+  
   };
   
   return (
@@ -38,19 +38,9 @@ const Flag = () => {
     
 
     {isOpen && (
-      <ul className="options-list" style={{ position: "absolute" }}>
-        <div className="search-input">
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value.toLowerCase())}
-            className="input"
-            placeholder="Search for a country..."
-          />
-        </div>
+      <ul className="flag-list">
 
         {FlagDta
-          .filter((data) => data.name.toLowerCase().includes(query))
           .map((data) => (
             <li key={data.id} onClick={() => handleSelect(data.name)}>
               {data.name}

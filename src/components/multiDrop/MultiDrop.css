@@ -1,0 +1,71 @@
+/* MultiSelectWithSearch.css */
+.multiselect-container {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+  }
+  
+  .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .option {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selected {
+    background-color: #f0f0f0;
+  }
+  
+  .clear-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close-icon {
+    font-size: 16px;
+  }
+  
+  .selected-options {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  
+  .selected-option {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+  

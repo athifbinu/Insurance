@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import CountryData from "../../assets/Data/Country"
 import { BiChevronDown } from "react-icons/bi";
 import { IoIosClose } from "react-icons/io";
-import "../GoldDrop/Gold.css";
+import "./Country.css"
+
 
 const Gold = () => {
   const [selected, setSelected] = useState("");
@@ -46,7 +47,6 @@ const Gold = () => {
               value={query}
               onChange={(e) => setQuery(e.target.value.toLowerCase())}
               className="input"
-              placeholder="Search for a country..."
             />
           </div>
 
