@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import goldData from "../../assets/Data/Gold";
+import CountryData from "../../assets/Data/Country"
 import { BiChevronDown } from "react-icons/bi";
 import { IoIosClose } from "react-icons/io";
-import "./Gold.css";
+import "../GoldDrop/Gold.css";
 
 const Gold = () => {
   const [selected, setSelected] = useState("");
@@ -22,6 +22,7 @@ const Gold = () => {
     setSelected(""); // Clear the selected value
     setQuery(""); // Clear the search query
   };
+  
 
   return (
     <div className="custom-dropdown">
@@ -30,14 +31,12 @@ const Gold = () => {
           ? selected.length > 25
             ? selected.substring(0, 25) + "..."
             : selected
-          : "Gold"}
+          : "Uited Arab Emirates"}
         <div>
           <IoIosClose style={{ color: "red" }} size={25} />
           <BiChevronDown size={25} className={isOpen ? "rotate-180" : ""} />
         </div>
       </div>
-
-      
 
       {isOpen && (
         <ul className="options-list" style={{ position: "absolute" }}>
@@ -51,7 +50,7 @@ const Gold = () => {
             />
           </div>
 
-          {goldData
+          {CountryData
             .filter((data) => data.name.toLowerCase().includes(query))
             .map((data) => (
               <li key={data.id} onClick={() => handleSelect(data.name)}>

@@ -1,44 +1,89 @@
-.dropdown {
-  margin: 0 auto;
-  z-index: 10000;
-  width: 300px;
-  position: relative;
-}
-.dropdown,
-.dropdown * {
-  z-index: 10;
-}
-.dropdown .dropdown-btn {
-  cursor: pointer;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  color: #777;
-  font-weight: 500;
-}
-.dropdown-content {
-  position: absolute;
-  /* top: 110%; */
-  left: 0;
-  width: 100%;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.07);
-}
-.dropdown-content .item {
-  padding: 10px;
-  cursor: pointer;
-}
-.dropdown-content .item:hover {
-  background: #fcfcfc;
-}
-
-button {
-  z-index: -1;
-  display: block;
-  width: 300px;
-  margin: 0 auto;
-}
+/* CustomDropdown.css */
+.custom-dropdown {
+    width: 362px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dropdown-header {
+    padding: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .text-gray-700 {
+    color: #777;
+  }
+  
+  .chevron-icon {
+    transition: transform 0.3s;
+  }
+  
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  
+  .options-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  .max-height {
+    max-height: 240px;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .search-input {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #fff;
+  }
+  
+  .search-icon {
+    color: #777;
+    margin-right: 8px;
+  }
+  
+  .input {
+    border: none;
+    outline: none;
+    flex: 1;
+  }
+  
+  .option {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selected {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* .visible {
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  } */
+  
+  
+  
