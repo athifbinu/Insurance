@@ -10,7 +10,8 @@ import Gold from "../GoldDrop/Gold";
 import CountryDrop from "../CountryDrop/CountryDrop";
 import FlagData from "../../assets/Data/Country";
 
-import MultiDrop from "../multiDrop/MultiDrop";
+// import MultiDrop from "../multiDrop/MultiDrop";
+import  MultiDrop  from "../../components/multiDrop/MultiDrop"
 
 const Home = () => {
   const [showAdvancedText, setShowAdvancedText] = useState(false);
@@ -41,6 +42,7 @@ const Home = () => {
       <h2 style={{ marginLeft: "19px", marginTop: "18px" }}>
         Add Travel Certificate
       </h2>
+
 
       <div className="flex">
         <div className="generel">
@@ -158,13 +160,16 @@ const Home = () => {
           <hr />
           <div className="flex" style={{ marginTop: "18px" }}>
             <div className="travel-right">
+
+
               <div>
                 <label htmlFor="destination">Destination(s)</label>
-                  <input
+                  {/* <input
                     type="text"
                     id="destination"
                     style={{ width: "382px" }}
-                  />
+                  /> */}
+                  <MultiDrop/>
               </div>
 
               <div className="flex" style={{ gap: "10px" }}>
