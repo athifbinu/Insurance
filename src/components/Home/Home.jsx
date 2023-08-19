@@ -9,9 +9,10 @@ import Brazil from "../../assets/brazil.png";
 import Gold from "../GoldDrop/Gold";
 import CountryDrop from "../CountryDrop/CountryDrop";
 import FlagData from "../../assets/Data/Country";
+import DateDrop from "../DatePiker/DateDrop";
 
 // import MultiDrop from "../multiDrop/MultiDrop";
-import  MultiDrop  from "../../components/multiDrop/MultiDrop"
+import MultiDrop from "../../components/multiDrop/MultiDrop";
 
 const Home = () => {
   const [showAdvancedText, setShowAdvancedText] = useState(false);
@@ -42,7 +43,6 @@ const Home = () => {
       <h2 style={{ marginLeft: "19px", marginTop: "18px" }}>
         Add Travel Certificate
       </h2>
-
 
       <div className="flex">
         <div className="generel">
@@ -101,7 +101,7 @@ const Home = () => {
                       alignItems: "center",
                       marginTop: "-28px",
                       marginLeft: "5px",
-                      cursor:"pointer"
+                      cursor: "pointer",
                     }}
                   >
                     <img
@@ -130,11 +130,6 @@ const Home = () => {
                     </ul>
                   )}
                 </div>
-
-                
-
-
-
               </div>
             </div>
 
@@ -160,28 +155,23 @@ const Home = () => {
           <hr />
           <div className="flex" style={{ marginTop: "18px" }}>
             <div className="travel-right">
-
-
               <div>
                 <label htmlFor="destination">Destination(s)</label>
-                  {/* <input
-                    type="text"
-                    id="destination"
-                    style={{ width: "382px" }}
-                  /> */}
-                  <MultiDrop/>
+                <MultiDrop />
               </div>
 
               <div className="flex" style={{ gap: "10px" }}>
                 <div>
                   <label htmlFor="from">From</label>
-                  <input type="text" />
+                   <DateDrop/>
                 </div>
                 <div>
                   <label htmlFor="to">To</label>
                   <input type="text" />
                 </div>
               </div>
+
+
 
               <div>
                 <label htmlFor="duration">Duration</label>
