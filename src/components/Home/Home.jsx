@@ -23,6 +23,7 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [showFamily, setshowFamily] = useState(false);
+  const [showMale, setShowFemale] = useState(false);
 
   const handleIconClick = () => {
     setShowAdvancedText(true);
@@ -47,6 +48,14 @@ const Home = () => {
 
   const openSingle = () => {
     setshowFamily(false);
+  };
+
+  const openFemale = () => {
+    setShowFemale(true);
+  };
+
+  const openMale = () => {
+    setShowFemale(false);
   };
 
   return (
@@ -246,7 +255,7 @@ const Home = () => {
                   style={{ alignItems: "center", gap: "2px" }}
                 >
                   <label className="dot-checkbox">
-                    <input type="checkbox" />
+                    <input onClick={openMale} type="checkbox" />
                     <span className="dot"></span>
                   </label>
                   <p>Male</p>
@@ -260,7 +269,7 @@ const Home = () => {
                   }}
                 >
                   <label className="dot-checkbox">
-                    <input type="checkbox" />
+                    <input onClick={openFemale} type="checkbox" />
                     <span className="dot"></span>
                   </label>
                   <p>Female</p>
@@ -280,18 +289,26 @@ const Home = () => {
 
               <div>
                 <label>Last Name</label>
+                {showMale && <label>Maiden Name</label>}
                 <input type="text" />
               </div>
+
+              {showMale && (
+                <div>
+                  <label>Last Name</label>
+                  <input type="text" />
+                </div>
+              )}
             </div>
 
             <div className="name-section flex">
               <div>
-                <label>First Name</label>
+                <label>Passport No.</label>
                 <input type="text" />
               </div>
 
               <div>
-                <label>Middle Name</label>
+                <label>Date Of Birth</label>
                 <input type="text" />
               </div>
 
