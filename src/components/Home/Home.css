@@ -52,11 +52,11 @@
 .contact-form-textarea::placeholder {
   color: #aaa;
 }
-.left{
+.left {
   position: relative;
   padding: 11px;
 }
-.right{
+.right {
   padding: 13px;
 }
 
@@ -98,7 +98,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.travel-right button {
+.add-btn {
   font-weight: bold;
   height: 32px;
   width: 100%;
@@ -196,11 +196,22 @@
   font-size: 18px;
   width: 155px;
   border: 1px solid #bcbcbc;
+  border-radius: 3px;
 }
 .name-section label {
   display: block;
   margin-bottom: 3px;
   font-weight: bold;
+}
+.name-section button {
+  width: 155px;
+  height: 25px;
+  margin-top: 34px;
+  background-color: #d6ae40;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
 }
 
 .back-btn button {
@@ -234,7 +245,7 @@
 .box-2 {
   background-color: #fff;
 }
-.flag-list{
+.flag-list {
   border: 1px solid #ccc;
   /* border-top: none; */
   background-color: #fff;
@@ -247,12 +258,37 @@
   height: 128px;
   cursor: pointer;
 }
-.flag-list li{
+.flag-list li {
   display: flex;
   align-items: center;
   padding: 3px;
   gap: 10px;
 }
-.flag-list li:hover{
+.flag-list li:hover {
   background-color: #ccc;
+}
+
+.beni-list button {
+  width: 170px;
+  height: 25px;
+  border: 1px solid #bcbcbc;
+  background-color: #fff;
+  font-weight: bold;
+  text-align: start;
+}
+.actions {
+  align-items: center;
+}
+.actions button {
+  position: relative;
+  height: 25px;
+  width: 85px;
+  background-color: #fff;
+  border: 1px solid #bcbcbc;
+  font-weight: bold;
+  text-align: start;
+}
+.action-icon {
+  position: absolute;
+  margin-left: 60px;
 }

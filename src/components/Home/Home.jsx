@@ -5,6 +5,7 @@ import { IoIosClose } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
 import Brazil from "../../assets/brazil.png";
+import { AiTwotoneDelete } from "react-icons/ai";
 
 import Gold from "../GoldDrop/Gold";
 import CountryDrop from "../CountryDrop/CountryDrop";
@@ -21,6 +22,8 @@ const Home = () => {
   const [select, setSelected] = useState(""); // Initialize with an empty string
   const [isOpen, setIsOpen] = useState(false);
 
+  const [showFamily, setshowFamily] = useState(false);
+
   const handleIconClick = () => {
     setShowAdvancedText(true);
   };
@@ -36,6 +39,14 @@ const Home = () => {
 
   const toggleDropDown = () => {
     setIsOpen(!isOpen);
+  };
+
+  const openfamily = () => {
+    setshowFamily(true);
+  };
+
+  const openSingle = () => {
+    setshowFamily(false);
   };
 
   return (
@@ -163,22 +174,20 @@ const Home = () => {
               <div className="flex" style={{ gap: "10px" }}>
                 <div>
                   <label htmlFor="from">From</label>
-                   <DateDrop/>
+                  <DateDrop />
                 </div>
                 <div>
                   <label htmlFor="to">To</label>
-                  <input type="text" />
+                  <DateDrop />
                 </div>
               </div>
-
-
 
               <div>
                 <label htmlFor="duration">Duration</label>
                 <input type="text" style={{ width: "382px" }} />
               </div>
 
-              <button>+Aff Travel</button>
+              <button className="add-btn">+Aff Travel</button>
             </div>
 
             <div className="travel-left">
@@ -207,18 +216,19 @@ const Home = () => {
                   style={{ alignItems: "center", gap: "2px" }}
                 >
                   <label className="dot-checkbox">
-                    <input type="checkbox" />
+                    <input onClick={openSingle} type="checkbox" />
                     <span className="dot"></span>
                   </label>
                   <p>Single</p>
                   <AiFillQuestionCircle />
                 </div>
+
                 <div
                   className="flex"
                   style={{ alignItems: "center", gap: "2px" }}
                 >
                   <label className="dot-checkbox">
-                    <input type="checkbox" />
+                    <input onClick={openfamily} type="checkbox" />
                     <span className="dot"></span>
                   </label>
                   <p>Family</p>
@@ -284,7 +294,31 @@ const Home = () => {
                 <label>Middle Name</label>
                 <input type="text" />
               </div>
+
+              {showFamily && (
+                <div>
+                  <button>+ Add Beneficiary</button>
+                </div>
+              )}
             </div>
+
+            {showFamily && (
+              <div
+                className="beniForm-section flex"
+                style={{ marginTop: "14px" }}
+              >
+                <div className="beni-list">
+                  <button>First Name</button>
+                  <button>Last Name</button>
+                  <button>Date of Birth</button>
+                  <button>Passport No.</button>
+                </div>
+                <div className="actions flex">
+                  <button>Actions</button>
+                  <AiTwotoneDelete size={15} className="action-icon" />
+                </div>
+              </div>
+            )}
 
             <div className="back-btn">
               <button>Back</button>
