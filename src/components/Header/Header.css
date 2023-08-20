@@ -45,4 +45,52 @@ header{
 
 
 
+  .languge-list {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    overflow-y: auto;
+    position: absolute;
+    height: 118px;
+    cursor: pointer;
+    margin-top: 175px;
+    width: 102px;
+    overflow: hidden;
+    border-radius: 5px;
+
+  }
+  .languge-list li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+  
+  .languge-list li:hover {
+    background-color: #ccc;
+  }
+
+  .show-task{
+    width: 151px;
+    height: 58px;
+    background-color:#fff;
+    position: absolute;
+    margin-top: 10px;
+    margin-top: 107px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+  }
+  .task-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+    margin-top: 13px;
+  }
+
+
+
+
+
+
 
