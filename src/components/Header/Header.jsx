@@ -40,18 +40,18 @@ const Header = () => {
       <div className="logo-section flex">
         <img src={logo} alt="" />
 
-        <p>HOME</p>
-        <MdArrowForwardIos />
-        <p>CONTRACT</p>
-        <MdArrowForwardIos />
-        <p>TRAVEL CERTIFICATE</p>
-        <MdArrowForwardIos />
-        <p>ADD TRAVEL CERTIFICATE</p>
+        <p className="d-none">HOME</p>
+        <MdArrowForwardIos  className="d-none"/>
+        <p className="d-none">CONTRACT</p>
+        <MdArrowForwardIos className="d-none" />
+        <p className="d-none">TRAVEL CERTIFICATE</p>
+        <MdArrowForwardIos className="d-none"/>
+        <p className="d-none">ADD TRAVEL CERTIFICATE</p>
       </div>
 
       <div className="last-section flex">
-        <h3>RTK</h3>
-        <span onClick={toggleOpen}>
+         <h3 className="d-none">RTK</h3>
+        <span className="d-none" onClick={toggleOpen}>
           <img src={select || india} alt="" />
         </span>
         {open && (
@@ -64,7 +64,10 @@ const Header = () => {
             ))}
           </ul>
         )}
-        <MdArrowDropDown />
+        <MdArrowDropDown className="d-none" />
+        
+
+
 
         <hr style={{ height: "18px" }} />
 
@@ -88,7 +91,9 @@ const Header = () => {
           </div>
         )}
 
-        <div onClick={handleProfile}>
+
+
+        <div className="d-none" onClick={handleProfile}>
           <GoPerson size={27} />
         </div>
 

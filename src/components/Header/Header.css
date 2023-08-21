@@ -111,3 +111,10 @@ header {
 .profile-drop span:hover {
   background-color: #ccc;
 }
+
+
+@media (max-width:800px) {
+   .d-none{
+    display: none;
+   }
+}
