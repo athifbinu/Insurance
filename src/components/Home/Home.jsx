@@ -10,7 +10,6 @@ import { AiTwotoneDelete } from "react-icons/ai";
 import Gold from "../GoldDrop/Gold";
 import CountryDrop from "../CountryDrop/CountryDrop";
 import FlagData from "../../assets/Data/Country";
-import DateDrop from "../DatePiker/DateDrop";
 
 // import MultiDrop from "../multiDrop/MultiDrop";
 import MultiDrop from "../../components/multiDrop/MultiDrop";
@@ -192,11 +191,11 @@ const Home = () => {
               <div className="flex" style={{ gap: "10px" }}>
                 <div>
                   <label htmlFor="from">From</label>
-                  <DateDrop />
+                  <input type="date" placeholder="enter date" />
                 </div>
                 <div>
                   <label htmlFor="to">To</label>
-                  <DateDrop />
+                  <input type="date" placeholder="enter date" />
                 </div>
               </div>
 
@@ -297,8 +296,11 @@ const Home = () => {
               </div>
 
               <div>
-                <label>Last Name</label>
-                {showMale && <label>Maiden Name</label>}
+                {showMale ? (
+                  <label>Maiden Name</label>
+                ) : (
+                  <label>Last Name</label>
+                )}
                 <input type="text" />
               </div>
 
