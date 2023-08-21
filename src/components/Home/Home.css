@@ -136,6 +136,10 @@
   background-color: #fff;
   border: 1px solid #ccc;
 }
+.travel-area{
+  display: flex;
+  padding-top: 17px;
+}
 
 .destination-btn {
   width: 135px;
@@ -315,6 +319,13 @@
    gap: 10px;
 
 }
+.travel-right input{
+  width: 145px;
+}
+.duration input{
+  width: 95%;
+}
+
 
 
 
@@ -355,7 +366,17 @@
   .dateSection{
     display: block;
   }
-  .dateSection input{
+  .travel-right input{
     width: 57%;
+  }
+  .travel-area{
+    display: block;
+  }
+  .travel-area input{
+    width: 93%;
+  }
+  .travel-btn{
+    display: flex;
+    justify-content: center;
   }
 }

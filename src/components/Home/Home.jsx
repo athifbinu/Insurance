@@ -183,7 +183,7 @@ const Home = () => {
           <h2>Travel</h2>
           <br />
           <hr />
-          <div className="flex" style={{ marginTop: "18px" }}>
+          <div className="travel-area">
             <div className="travel-right">
               <div>
                 <label htmlFor="destination">Destination(s)</label>
@@ -203,7 +203,7 @@ const Home = () => {
 
               <div className="duration">
                 <label htmlFor="duration">Duration</label>
-                <input type="text" style={{ width: "382px" }} />
+                <input type="text"/>
               </div>
 
               <button className="add-btn">+Aff Travel</button>
