@@ -8,11 +8,15 @@ import { MdArrowForwardIos, MdArrowDropDown } from "react-icons/md";
 import Flag from "../../assets/Data/Language.js";
 import { AiFillBook } from "react-icons/ai";
 import { PiNumberZeroFill } from "react-icons/pi";
+import { BsFillPersonFill } from "react-icons/bs";
+import { TfiWrite } from "react-icons/tfi";
+import { BsFillFileLockFill } from "react-icons/bs";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [select, setSelect] = useState("");
   const [show, setshow] = useState(false);
+  const [showProfile, setshowProfile] = useState(false);
 
   const handleselct = (selectFlag) => {
     setSelect(selectFlag);
@@ -25,6 +29,10 @@ const Header = () => {
 
   const togleShowTask = () => {
     setshow(!show);
+  };
+
+  const handleProfile = () => {
+    setshowProfile(!showProfile);
   };
 
   return (
@@ -79,7 +87,31 @@ const Header = () => {
             </div>
           </div>
         )}
-        <GoPerson size={27} />
+
+        <div onClick={handleProfile}>
+          <GoPerson size={27} />
+        </div>
+
+        {showProfile && (
+          <div className="profile-drop">
+            <ul>
+              <span>
+                <BsFillPersonFill />
+                <li>EXCURSIONSPORTAL</li>
+              </span>
+
+              <span>
+                <TfiWrite />
+                <li>API Documentation</li>
+              </span>
+
+              <span>
+                <BsFillFileLockFill />
+                <li>Logout</li>
+              </span>
+            </ul>
+          </div>
+        )}
       </div>
     </header>
   );

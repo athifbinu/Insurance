@@ -24,7 +24,7 @@
   line-height: 27px;
 }
 .right button {
-  width: 92%;
+  width: 87%;
   height: 27px;
   background-color: #505357;
   color: #fff;
@@ -32,6 +32,7 @@
   border: none;
   border-radius: 7px;
   margin-top: 10px;
+  margin-bottom: 19px;
 }
 
 .note {
@@ -78,6 +79,17 @@
   background-color: #fff;
   margin: 20px;
   width: 70%;
+}
+
+
+
+.adress label{
+  display: block;
+}
+.adress input::placeholder{
+  font-weight: bold;
+  color: black;
+
 }
 
 .travel-form {

@@ -150,6 +150,15 @@ const Home = () => {
                     </ul>
                   )}
                 </div>
+
+                <button>+Add Phone</button>
+                <br />
+                <div className="adress">
+                  <input type="number" placeholder="Phone Number" />
+
+                  <label>Adress</label>
+                  <input type="text" />
+                </div>
               </div>
             </div>
 
@@ -289,7 +298,7 @@ const Home = () => {
 
               <div>
                 <label>Last Name</label>
-                {showMale && <label>Maiden Name</label>} 
+                {showMale && <label>Maiden Name</label>}
                 <input type="text" />
               </div>
 
