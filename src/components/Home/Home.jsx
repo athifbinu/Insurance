@@ -63,12 +63,12 @@ const Home = () => {
         Add Travel Certificate
       </h2>
 
-      <div className="flex">
+      <div className="generel-section">
         <div className="generel">
           <div className="form-data">
             <h2>General information</h2>
             <hr />
-            <div className="flex">
+            <div className="form-section">
               <div className="left">
                 <div>
                   <label>Assistance Plan</label>
@@ -97,7 +97,7 @@ const Home = () => {
 
                   <div>
                     <label>Email</label>
-                    <input
+                    <input className="rm"
                       type="text"
                       value={
                         showAdvancedText
@@ -190,7 +190,7 @@ const Home = () => {
                 <MultiDrop />
               </div>
 
-              <div className="flex" style={{ gap: "10px" }}>
+              <div className="dateSection">
                 <div>
                   <label htmlFor="from">From</label>
                   <input type="date" placeholder="enter date" />
@@ -201,7 +201,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div>
+              <div className="duration">
                 <label htmlFor="duration">Duration</label>
                 <input type="text" style={{ width: "382px" }} />
               </div>

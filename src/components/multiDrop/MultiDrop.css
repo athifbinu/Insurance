@@ -1,24 +1,24 @@
-/* MultiSelectWithSearch.css */
-.multiselect-container {
+/* 
+ .multiselect-container {
     position: relative;
     display: inline-block;
     width: 300px;
-  }
+  } */
   
-  .input-container {
+   /* .input-container {
     position: relative;
     display: flex;
     align-items: center;
-  }
-  
+  }  */
+/*   
   input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
+  } */
   
-  .dropdown {
+  /* .dropdown {
     position: absolute;
     top: 100%;
     left: 0;
@@ -30,42 +30,53 @@
     max-height: 200px;
     overflow-y: auto;
   }
-  
-  .option {
+   */
+  /* .option {
     padding: 8px;
     cursor: pointer;
   }
-  
-  .option:hover {
+   */
+  /* .option:hover {
     background-color: #f0f0f0;
   }
   
   .selected {
     background-color: #f0f0f0;
-  }
+  } */
   
-  .clear-button {
+  /* .clear-button {
     background: none;
     border: none;
     cursor: pointer;
-  }
-  
+  } */
+/*   
   .close-icon {
     font-size: 16px;
-  }
+  } */
   
-  .selected-options {
+  /* .selected-options {
     display: flex;
     flex-wrap: wrap;
     margin-top: 8px;
   }
-  
-  .selected-option {
+   */
+  /* .selected-option {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 4px 8px;
     margin-right: 4px;
     margin-bottom: 4px;
+  } */
+
+
+   .multiDrop{
+     margin-bottom: 16px;
+     width: 100%;
   }
-  
+
+@media (max-width:800px) {
+   .multiDrop{
+    width: 61%;
+   }
+}

@@ -73,4 +73,13 @@
     outline: none;
     flex: 1;
   }
+
+
+
+
+@media (max-width:800px) {
+   .custom-dropdown{
+    width: 245px;
+   }
+}
   

@@ -9,6 +9,12 @@
   width: 70%;
   display: block;
 }
+.generel-section{
+  display: flex;
+}
+.form-section{
+  display: flex;
+}
 .generel h2 {
   padding: 14px;
 }
@@ -303,4 +309,53 @@
 .action-icon {
   position: absolute;
   margin-left: 60px;
+}
+.dateSection{
+   display: flex;
+   gap: 10px;
+
+}
+
+
+
+@media (max-width:800px) {
+  .d-none{
+   display: none;
+  }
+  .d-block{
+    display: block;
+  }
+  .generel-section{
+    display: block;
+  }
+  .form-section{
+    display: block;
+  }
+  .generel{
+    width: 87%;
+  }
+  .right input{
+     width: 225px;
+  } 
+  .right button{
+    width: 100%;
+  }
+  .rm{
+    width: 225px;
+  }
+  .flag-list{
+    width: 67%;
+  }
+  .travel-section{
+    width: 87%;
+  }
+  .beneficiry-section{
+    width: 87%;
+  }
+  .dateSection{
+    display: block;
+  }
+  .dateSection input{
+    width: 57%;
+  }
 }

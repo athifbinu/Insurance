@@ -16,3 +16,9 @@
     padding: 10px;
     color: #fff;
 }
+
+@media (max-width:800px) {
+  .left-header{
+    display: none;
+  }
+}
