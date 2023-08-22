@@ -9,10 +9,10 @@
   width: 70%;
   display: block;
 }
-.generel-section{
+.generel-section {
   display: flex;
 }
-.form-section{
+.form-section {
   display: flex;
 }
 .generel h2 {
@@ -87,15 +87,12 @@
   width: 70%;
 }
 
-
-
-.adress label{
+.adress label {
   display: block;
 }
-.adress input::placeholder{
+.adress input::placeholder {
   font-weight: bold;
   color: black;
-
 }
 
 .travel-form {
@@ -136,7 +133,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
 }
-.travel-area{
+.travel-area {
   display: flex;
   padding-top: 17px;
 }
@@ -170,9 +167,22 @@
 
 .check-sections {
   gap: 86px;
+  display: flex;
 }
 .check-sections p {
   font-size: 14px;
+}
+.checkMale{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.checkFemale{
+  align-items: center;
+  gap: 2px;
+  margin-left: 24px;
+  display: flex;
+
 }
 
 .dot-checkbox {
@@ -212,6 +222,7 @@
 
 .name-section {
   gap: 8px;
+  display: flex;
 }
 .name-section input {
   height: 25px;
@@ -245,9 +256,13 @@
   border: 2px solid #bcbcbc;
 }
 
+
 .quotation-section {
   display: block;
   margin-top: 20px;
+}
+.mobileQutation-section{
+  display: none;
 }
 
 .box-1,
@@ -267,6 +282,8 @@
 .box-2 {
   background-color: #fff;
 }
+
+
 .flag-list {
   border: 1px solid #ccc;
   /* border-top: none; */
@@ -300,6 +317,7 @@
 }
 .actions {
   align-items: center;
+  display: flex;
 }
 .actions button {
   position: relative;
@@ -314,69 +332,111 @@
   position: absolute;
   margin-left: 60px;
 }
-.dateSection{
-   display: flex;
-   gap: 10px;
-
+.dateSection {
+  display: flex;
+  gap: 10px;
 }
-.travel-right input{
+.travel-right input {
   width: 145px;
 }
-.duration input{
+.duration input {
   width: 95%;
 }
+.beniForm-section {
+  display: flex;
+  margin-top: 14px;
+}
 
-
-
-
-@media (max-width:800px) {
-  .d-none{
-   display: none;
+@media (max-width: 800px) {
+  .d-none {
+    display: none;
   }
-  .d-block{
+  .d-block {
     display: block;
   }
-  .generel-section{
+  .generel-section {
     display: block;
   }
-  .form-section{
+  .form-section {
     display: block;
   }
-  .generel{
+  .generel {
     width: 87%;
   }
-  .right input{
-     width: 225px;
-  } 
-  .right button{
-    width: 100%;
-  }
-  .rm{
+  .right input {
     width: 225px;
   }
-  .flag-list{
+  .right button {
+    width: 100%;
+  }
+  .rm {
+    width: 225px;
+  }
+  .flag-list {
     width: 67%;
   }
-  .travel-section{
+  .travel-section {
     width: 87%;
   }
-  .beneficiry-section{
+  .beneficiry-section {
     width: 87%;
   }
-  .dateSection{
+  .dateSection {
     display: block;
   }
-  .travel-right input{
+  .travel-right input {
     width: 57%;
   }
-  .travel-area{
+  .travel-area {
     display: block;
   }
-  .travel-area input{
+  .travel-area input {
     width: 93%;
   }
-  .travel-btn{
+  .travel-btn {
     display: flex;
     justify-content: center;
   }
+  .check-sections {
+    display: block;
+  }
+  .search input {
+    width: 100%;
+  }
+  .name-section {
+    display: block;
+  }
+  .name-section input {
+    width: 100%;
+  }
+  .name-section button {
+    width: 100%;
+  }
+  .beni-list {
+    display: flex;
+  }
+  .beni-list button {
+    width: 52px;
+    height: 80px;
+  }
+  .actions {
+    display: block;
+  }
+  .actions button {
+    height: 80px;
+    width: 52px;
+  }
+  .action-icon {
+    margin-left: -36px;
+    margin-top: 49px;
+  }
+  .checkFemale{
+    margin-left: auto;
+  }
+  .quotation-section{
+      display: none;
+  }
+
+
+
 }

@@ -229,7 +229,7 @@ const Home = () => {
           <hr />
           <div style={{ marginTop: "14px", lineHeight: "30px" }}>
             <div style={{ lineHeight: "38px" }}>
-              <div className="check-sections flex">
+              <div className="check-sections">
                 <div
                   className="flex"
                   style={{ alignItems: "center", gap: "2px" }}
@@ -259,10 +259,9 @@ const Home = () => {
                 <input placeholder="Search" type="text" />
               </div>
 
-              <div className="check-sections flex">
+              <div className="check-sections">
                 <div
-                  className="flex"
-                  style={{ alignItems: "center", gap: "2px" }}
+                  className="checkMale"
                 >
                   <label className="dot-checkbox">
                     <input onClick={openMale} type="checkbox" />
@@ -271,12 +270,7 @@ const Home = () => {
                   <p>Male</p>
                 </div>
                 <div
-                  className="flex"
-                  style={{
-                    alignItems: "center",
-                    gap: "2px",
-                    marginLeft: "24px",
-                  }}
+                  className="checkFemale"
                 >
                   <label className="dot-checkbox">
                     <input onClick={openFemale} type="checkbox" />
@@ -286,7 +280,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="name-section flex">
+            <div className="name-section">
               <div>
                 <label>First Name</label>
                 <input type="text" />
@@ -314,7 +308,7 @@ const Home = () => {
               )}
             </div>
 
-            <div className="name-section flex">
+            <div className="name-section">
               <div>
                 <label>Passport No.</label>
                 <input type="text" />
@@ -334,8 +328,7 @@ const Home = () => {
 
             {showFamily && (
               <div
-                className="beniForm-section flex"
-                style={{ marginTop: "14px" }}
+                className="beniForm-section"
               >
                 <div className="beni-list">
                   <button>First Name</button>
@@ -343,7 +336,7 @@ const Home = () => {
                   <button>Date of Birth</button>
                   <button>Passport No.</button>
                 </div>
-                <div className="actions flex">
+                <div className="actions">
                   <button>Actions</button>
                   <AiTwotoneDelete size={15} className="action-icon" />
                 </div>
@@ -356,6 +349,14 @@ const Home = () => {
           </div>
         </div>
       </div>
+       
+      <div className="mobileQutation-section">
+          <div className="box-1">
+            <p>Quotation</p>
+          </div>
+          <div className="box-2"></div>
+        </div>
+
     </div>
   );
 };
