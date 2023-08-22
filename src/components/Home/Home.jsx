@@ -5,7 +5,7 @@ import { IoIosClose } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
 import Brazil from "../../assets/brazil.png";
-import { AiTwotoneDelete } from "react-icons/ai";
+import { AiTwotoneDelete, AiFillDelete } from "react-icons/ai";
 
 import Gold from "../GoldDrop/Gold";
 import CountryDrop from "../CountryDrop/CountryDrop";
@@ -57,6 +57,21 @@ const Home = () => {
     setShowFemale(false);
   };
 
+  const [phoneNumbers, setPhoneNumbers] = useState([]);
+  const [newPhoneNumber, setNewPhoneNumber] = useState("");
+
+  const handleAddPhoneNumber = () => {
+    if (newPhoneNumber.trim() !== "") {
+      setPhoneNumbers([...phoneNumbers, newPhoneNumber]);
+      setNewPhoneNumber("");
+    }
+  };
+
+  const handleDeletePhoneNumber = (index) => {
+    const updatedPhoneNumbers = phoneNumbers.filter((_, i) => i !== index);
+    setPhoneNumbers(updatedPhoneNumbers);
+  };
+
   return (
     <div className="home-section">
       <h2 style={{ marginLeft: "19px", marginTop: "18px" }}>
@@ -97,7 +112,8 @@ const Home = () => {
 
                   <div>
                     <label>Email</label>
-                    <input className="rm"
+                    <input
+                      className="rm"
                       type="text"
                       value={
                         showAdvancedText
@@ -111,18 +127,13 @@ const Home = () => {
 
                 <div className="pone-num">
                   <label>Phone Number</label>
-                  <input type="text" />
+                  <input
+                    type="number"
+                    value={newPhoneNumber}
+                    onChange={(e) => setNewPhoneNumber(e.target.value)}
+                  />
 
-                  <span
-                    onClick={toggleDropDown}
-                    className="flex"
-                    style={{
-                      alignItems: "center",
-                      marginTop: "-28px",
-                      marginLeft: "5px",
-                      cursor: "pointer",
-                    }}
-                  >
+                  <span onClick={toggleDropDown} className="flex">
                     <img
                       style={{ width: "26px" }}
                       src={select || Brazil} // Use the selected flag or a default flag
@@ -148,14 +159,27 @@ const Home = () => {
                       ))}
                     </ul>
                   )}
+
+                  <button onClick={handleAddPhoneNumber}>+Add Phone</button>
                 </div>
 
-                
-
-                <button>+Add Phone</button>
-                <br />
                 <div className="adress">
-                  <input type="number" placeholder="Phone Number" />
+                  <div className="phone-list">
+                    <button className="head-one">Phone Numbers</button>
+                    <button className="head-two"></button>
+                  </div>
+                  <div className="phoneNumber-list">
+                    {phoneNumbers.map((number, index) => (
+                      <div className="number-box1">{number}</div>
+                    ))}
+
+                    <div
+                      className="number-box2"
+                      onClick={() => handleDeletePhoneNumber()}
+                    >
+                      <AiFillDelete />
+                    </div>
+                  </div>
 
                   <label>Adress</label>
                   <input type="text" />
@@ -203,7 +227,7 @@ const Home = () => {
 
               <div className="duration">
                 <label htmlFor="duration">Duration</label>
-                <input type="text"/>
+                <input type="text" />
               </div>
 
               <button className="add-btn">+Aff Travel</button>
@@ -260,18 +284,14 @@ const Home = () => {
               </div>
 
               <div className="check-sections">
-                <div
-                  className="checkMale"
-                >
+                <div className="checkMale">
                   <label className="dot-checkbox">
                     <input onClick={openMale} type="checkbox" />
                     <span className="dot"></span>
                   </label>
                   <p>Male</p>
                 </div>
-                <div
-                  className="checkFemale"
-                >
+                <div className="checkFemale">
                   <label className="dot-checkbox">
                     <input onClick={openFemale} type="checkbox" />
                     <span className="dot"></span>
@@ -327,9 +347,7 @@ const Home = () => {
             </div>
 
             {showFamily && (
-              <div
-                className="beniForm-section"
-              >
+              <div className="beniForm-section">
                 <div className="beni-list">
                   <button>First Name</button>
                   <button>Last Name</button>
@@ -349,14 +367,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-       
-      <div className="mobileQutation-section">
-          <div className="box-1">
-            <p>Quotation</p>
-          </div>
-          <div className="box-2"></div>
-        </div>
 
+      <div className="mobileQutation-section">
+        <div className="box-1">
+          <p>Quotation</p>
+        </div>
+        <div className="box-2"></div>
+      </div>
     </div>
   );
 };
