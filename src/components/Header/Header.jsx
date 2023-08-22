@@ -11,12 +11,21 @@ import { PiNumberZeroFill } from "react-icons/pi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { TfiWrite } from "react-icons/tfi";
 import { BsFillFileLockFill } from "react-icons/bs";
+//close
+import {FaTimes} from "react-icons/fa"
+//open
+import {AiOutlineMenu} from "react-icons/ai"
 
+import LeftHeader from "./../LeftHeader/LeftHeder"
+ 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [select, setSelect] = useState("");
   const [show, setshow] = useState(false);
   const [showProfile, setshowProfile] = useState(false);
+
+
+
 
   const handleselct = (selectFlag) => {
     setSelect(selectFlag);
@@ -112,11 +121,17 @@ const Header = () => {
 
               <span>
                 <BsFillFileLockFill />
-                <li>Logout</li>
+                <li>Logout</li>AiOutlineMenu
               </span>
             </ul>
           </div>
         )}
+
+        <div className="mobile-menu">
+                <AiOutlineMenu size={25} style={{cursor:"pointer"}}/>
+          
+                <FaTimes  size={25} style={{cursor:"pointer"}}/>
+        </div>
       </div>
     </header>
   );

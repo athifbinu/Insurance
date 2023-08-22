@@ -112,9 +112,16 @@ header {
   background-color: #ccc;
 }
 
+.mobile-menu{
+  display: none;
+ }
+
 
 @media (max-width:800px) {
    .d-none{
     display: none;
+   }
+   .mobile-menu{
+    display: 0;
    }
 }

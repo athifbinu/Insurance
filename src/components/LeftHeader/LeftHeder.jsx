@@ -6,15 +6,15 @@ import {AiOutlineHome} from "react-icons/ai"
 
 const LeftHeder = () => {
   return (
-      <div className="left-header">
-         <div className="icons">
-           <AiOutlineHome size={20}/>
-           <AiOutlineHome size={20}/>
-           <AiOutlineHome size={20}/>
-           <AiOutlineHome size={20}/>
-            
-         </div>
-      </div>
+        <div className="left-header">
+        <div className="icons">
+          <AiOutlineHome size={20}/>
+          <AiOutlineHome size={20}/>
+          <AiOutlineHome size={20}/>
+          <AiOutlineHome size={20}/>
+           
+        </div>
+     </div>
   );
 }
 
