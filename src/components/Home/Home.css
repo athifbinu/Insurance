@@ -30,26 +30,26 @@
   line-height: 27px;
 }
 
-.pone-num label{
+.pone-num label {
   display: block;
 }
-.pone-num input{
+.pone-num input {
   width: 316px;
   margin-left: 37px;
 }
-.pone-num span{
+.pone-num span {
   align-items: center;
-    margin-top: -28px;
-    cursor: pointer;
-    width: 40px;
-    height: 28px;
-    border-radius: 4px;
+  margin-top: -28px;
+  cursor: pointer;
+  width: 40px;
+  height: 28px;
+  border-radius: 4px;
 }
 
-.pone-num span:hover{
+.pone-num span:hover {
   background-color: #ccc;
 }
-.pone-num button{
+.pone-num button {
   width: 100%;
   height: 27px;
   background-color: #505357;
@@ -193,17 +193,16 @@
 .check-sections p {
   font-size: 14px;
 }
-.checkMale{
+.checkMale {
   display: flex;
   align-items: center;
   gap: 2px;
 }
-.checkFemale{
+.checkFemale {
   align-items: center;
   gap: 2px;
   margin-left: 24px;
   display: flex;
-
 }
 
 .dot-checkbox {
@@ -277,12 +276,11 @@
   border: 2px solid #bcbcbc;
 }
 
-
 .quotation-section {
   display: block;
   margin-top: 20px;
 }
-.mobileQutation-section{
+.mobileQutation-section {
   display: none;
 }
 
@@ -303,7 +301,6 @@
 .box-2 {
   background-color: #fff;
 }
-
 
 .flag-list {
   border: 1px solid #ccc;
@@ -368,11 +365,11 @@
   margin-top: 14px;
 }
 
-.phone-list{
+.phone-list {
   display: flex;
 }
 
-.head-one{
+.head-one {
   width: 85%;
   height: 26px;
   border: 1px solid #000;
@@ -381,27 +378,27 @@
   text-align: start;
   padding: 2px;
 }
-.head-two{
+.head-two {
   border: 1px solid #000;
   background-color: #fff;
   width: 56px;
 }
 
-.phoneNumber-list{
-  display: flex;
+.phoneNumber-list {
   justify-content: space-between;
   border: 1px solid #bcbcbc;
 }
-.number-box2{
+.number-box {
+  display: flex;
+  border: 1px solid #bcbcbc;
+}
+.number-box2 {
   border: 1px solid #bcbcbc;
   width: 53px;
   text-align: center;
   cursor: pointer;
+  margin-left: 223px;
 }
-
-
-
-
 
 @media (max-width: 800px) {
   .d-none {
@@ -486,13 +483,10 @@
     margin-left: -36px;
     margin-top: 49px;
   }
-  .checkFemale{
+  .checkFemale {
     margin-left: auto;
   }
-  .quotation-section{
-      display: none;
+  .quotation-section {
+    display: none;
   }
-
-
-
 }

@@ -170,15 +170,16 @@ const Home = () => {
                   </div>
                   <div className="phoneNumber-list">
                     {phoneNumbers.map((number, index) => (
-                      <div className="number-box1">{number}</div>
+                      <div className="number-box" key={index}>
+                        {number}
+                        <div
+                          className="number-box2"
+                          onClick={() => handleDeletePhoneNumber(index)}
+                        >
+                          <AiFillDelete size={20} />
+                        </div>
+                      </div>
                     ))}
-
-                    <div
-                      className="number-box2"
-                      onClick={() => handleDeletePhoneNumber()}
-                    >
-                      <AiFillDelete />
-                    </div>
                   </div>
 
                   <label>Adress</label>
