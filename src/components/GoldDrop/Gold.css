@@ -73,6 +73,12 @@
     outline: none;
     flex: 1;
   }
+
+  @media (max-width:800px) {
+    .options-liste{
+      width: 85%;
+    }
+ }
   
 
   

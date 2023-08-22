@@ -399,6 +399,9 @@
   cursor: pointer;
   margin-left: 223px;
 }
+.mobile-quotation{
+  display: none;
+}
 
 @media (max-width: 800px) {
   .d-none {
@@ -488,5 +491,8 @@
   }
   .quotation-section {
     display: none;
+  }
+  .pone-num input{
+    width: 78%;
   }
 }

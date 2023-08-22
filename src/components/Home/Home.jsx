@@ -369,12 +369,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mobileQutation-section">
-        <div className="box-1">
-          <p>Quotation</p>
+      <div className="mobile-quotation">
+          <div className="box-1">
+            <p>Quotation</p>
+          </div>
+          <div className="box-2"></div>
         </div>
-        <div className="box-2"></div>
-      </div>
     </div>
   );
 };
