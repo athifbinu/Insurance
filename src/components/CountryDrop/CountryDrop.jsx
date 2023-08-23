@@ -1,18 +1,20 @@
 import React, { useState } from "react";
-import CountryData from "../../assets/Data/Country"
+import CountryData from "../../assets/Data/Country";
 import { BiChevronDown } from "react-icons/bi";
 import { IoIosClose } from "react-icons/io";
-import "./Country.css"
-
+import "./Country.css";
 
 const Gold = () => {
   const [selected, setSelected] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
 
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
   // Function to handle selecting a country
-  const handleSelect = (countryName) => {
+  const handleSelect = (countryName, index) => {
     setSelected(countryName);
+    setSelectedIndex(index);
     setIsOpen(false); // Close the dropdown
     setQuery(""); // Clear the search query
   };
@@ -23,7 +25,6 @@ const Gold = () => {
     setSelected(""); // Clear the selected value
     setQuery(""); // Clear the search query
   };
-  
 
   return (
     <div className="custom-dropdown">
@@ -34,7 +35,13 @@ const Gold = () => {
             : selected
           : "Uited Arab Emirates"}
         <div>
-          <IoIosClose style={{ color: "red" }} size={25} />
+          <IoIosClose size={25}
+            style={{ color: "red", cursor: "pointer" }}
+            onClick={() => {
+              setSelected("");
+              setSelectedIndex(null);
+            }}
+          />
           <BiChevronDown size={25} className={isOpen ? "rotate-180" : ""} />
         </div>
       </div>
@@ -50,13 +57,13 @@ const Gold = () => {
             />
           </div>
 
-          {CountryData
-            .filter((data) => data.name.toLowerCase().includes(query))
-            .map((data) => (
-              <li key={data.id} onClick={() => handleSelect(data.name)}>
-                {data.name}
-              </li>
-            ))}
+          {CountryData.filter((data) =>
+            data.name.toLowerCase().includes(query)
+          ).map((data, index) => (
+            <li key={data.id} onClick={() => handleSelect(data.name, index)}>
+              {data.name}
+            </li>
+          ))}
         </ul>
       )}
     </div>

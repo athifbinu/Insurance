@@ -113,7 +113,6 @@ const Home = () => {
                   <div>
                     <label>Email</label>
                     <input
-                      className="rm"
                       type="text"
                       value={
                         showAdvancedText

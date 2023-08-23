@@ -9,6 +9,8 @@ const Gold = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
 
+  
+
   // Function to handle selecting a country
   const handleSelect = (countryName) => {
     setSelected(countryName);

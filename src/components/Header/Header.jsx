@@ -24,6 +24,12 @@ const Header = () => {
   const [show, setshow] = useState(false);
   const [showProfile, setshowProfile] = useState(false);
 
+  const [openNave,setOpenNav]=useState(false)
+
+  const OpencloseNav=()=>{
+    setOpenNav(!openNave)
+  }
+
 
 
 
@@ -128,9 +134,10 @@ const Header = () => {
         )}
 
         <div className="mobile-menu">
-                <AiOutlineMenu size={25} style={{cursor:"pointer"}}/>
+                <AiOutlineMenu onClick={OpencloseNav} size={25} style={{cursor:"pointer"}}/>
           
-                <FaTimes  size={25} style={{cursor:"pointer"}}/>
+                <FaTimes onClick={OpencloseNav} size={25} style={{cursor:"pointer"}}/>
+
         </div>
       </div>
     </header>
