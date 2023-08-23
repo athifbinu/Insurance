@@ -163,13 +163,13 @@
   width: 135px;
 }
 .from-btn {
-  width: 60px;
+  width: 75px;
 }
 .to-btn {
-  width: 35px;
+  width: 58px;
 }
 .duration-btn {
-  width: 70px;
+  width: 85px;
 }
 .actions-btn {
   width: 68px;
@@ -399,40 +399,40 @@
   cursor: pointer;
   margin-left: 223px;
 }
-.mobile-quotation{
+.mobile-quotation {
   display: none;
 }
-.travel-listSection{
+.travel-listSection {
   display: flex;
 }
 
-.travel-list{
+.travel-list {
   margin-left: 21px;
   margin-top: -22px;
 }
-.travel-list button{
-  height: 50px;
+.travel-list button {
+  height: auto;
   background-color: #fff;
   list-style: none;
   border: 1px solid #bcbcbc;
   text-align: start;
+  padding: 8px;
 }
-.travelBox1{
+.travelBox1 {
   width: 135px;
 }
-.travelBox2{
-  width: 61px;
+.travelBox2 {
+  width: 74px;
 }
-.travelBox3{
-  width: 35px;
+.travelBox3 {
+  width: 59px;
 }
-.travelBox4{
-  width: 69px;
+.travelBox4 {
+  width: 85px;
 }
-.travelBox5{
+.travelBox5 {
   width: 68px;
 }
-
 
 @media (max-width: 800px) {
   .d-none {
@@ -523,10 +523,10 @@
   .quotation-section {
     display: none;
   }
-  .pone-num input{
+  .pone-num input {
     width: 78%;
   }
-  .number-box2{
+  .number-box2 {
     margin-left: 122px;
   }
 }

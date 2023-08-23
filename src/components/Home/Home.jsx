@@ -72,6 +72,30 @@ const Home = () => {
     setPhoneNumbers(updatedPhoneNumbers);
   };
 
+  const [travelData, setTravelData] = useState([]);
+  const [fromDate, setFromDate] = useState("");
+  const [toDate, setToDate] = useState("");
+  const [duration, setDuration] = useState("");
+
+  const handleAddTravel = () => {
+    if (fromDate && toDate && duration) {
+      const newTravel = {
+        fromDate,
+        toDate,
+        duration,
+      };
+      setTravelData([...travelData, newTravel]);
+      setFromDate("");
+      setToDate("");
+      setDuration("");
+    }
+  };
+
+  const handleDeleteTravel = (index) => {
+    const updatedTravelData = travelData.filter((_, i) => i !== index);
+    setTravelData(updatedTravelData);
+  };
+
   return (
     <div className="home-section">
       <h2 style={{ marginLeft: "19px", marginTop: "18px" }}>
@@ -217,20 +241,36 @@ const Home = () => {
               <div className="dateSection">
                 <div>
                   <label htmlFor="from">From</label>
-                  <input type="date" placeholder="enter date" />
+                  <input
+                    type="date"
+                    placeholder="enter date"
+                    value={fromDate}
+                    onChange={(e) => setFromDate(e.target.value)}
+                  />
                 </div>
                 <div>
                   <label htmlFor="to">To</label>
-                  <input type="date" placeholder="enter date" />
+                  <input
+                    type="date"
+                    placeholder="enter date"
+                    value={toDate}
+                    onChange={(e) => setToDate(e.target.value)}
+                  />
                 </div>
               </div>
 
               <div className="duration">
                 <label htmlFor="duration">Duration</label>
-                <input type="number"/>
+                <input
+                  type="number"
+                  value={duration}
+                  onChange={(e) => setDuration(e.target.value)}
+                />
               </div>
 
-              <button className="add-btn">+Aff Travel</button>
+              <button className="add-btn" onClick={handleAddTravel}>
+                +Aff Travel
+              </button>
             </div>
 
             <div className="travel-left">
@@ -243,15 +283,20 @@ const Home = () => {
               </div>
 
               <div className="travel-listSection">
-                <div className="travel-list">
-                  <button className="travelBox1">Africa</button>
-                  <button className="travelBox2">20</button>
-                  <button className="travelBox3">508</button>
-                  <button className="travelBox4">144</button>
-                  <button className="travelBox5">
-                    <AiFillDelete/>
-                  </button>
-                </div>
+                {travelData.map((item, index) => (
+                  <div className="travel-list" key={index}>
+                    <button className="travelBox1">America</button>
+                    <button className="travelBox2">{item.fromDate}</button>
+                    <button className="travelBox3">{item.toDate}</button>
+                    <button className="travelBox4">{item.duration}</button>
+                    <button
+                      className="travelBox5"
+                      onClick={() => handleDeleteTravel(index)}
+                    >
+                      <AiFillDelete />
+                    </button>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
