@@ -402,6 +402,37 @@
 .mobile-quotation{
   display: none;
 }
+.travel-listSection{
+  display: flex;
+}
+
+.travel-list{
+  margin-left: 21px;
+  margin-top: -22px;
+}
+.travel-list button{
+  height: 50px;
+  background-color: #fff;
+  list-style: none;
+  border: 1px solid #bcbcbc;
+  text-align: start;
+}
+.travelBox1{
+  width: 135px;
+}
+.travelBox2{
+  width: 61px;
+}
+.travelBox3{
+  width: 35px;
+}
+.travelBox4{
+  width: 69px;
+}
+.travelBox5{
+  width: 68px;
+}
+
 
 @media (max-width: 800px) {
   .d-none {

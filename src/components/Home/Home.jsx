@@ -227,7 +227,7 @@ const Home = () => {
 
               <div className="duration">
                 <label htmlFor="duration">Duration</label>
-                <input type="text" />
+                <input type="number"/>
               </div>
 
               <button className="add-btn">+Aff Travel</button>
@@ -240,6 +240,18 @@ const Home = () => {
                 <button className="to-btn">To</button>
                 <button className="duration-btn">Duration</button>
                 <button className="actions-btn">Actions</button>
+              </div>
+
+              <div className="travel-listSection">
+                <div className="travel-list">
+                  <button className="travelBox1">Africa</button>
+                  <button className="travelBox2">20</button>
+                  <button className="travelBox3">508</button>
+                  <button className="travelBox4">144</button>
+                  <button className="travelBox5">
+                    <AiFillDelete/>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -369,11 +381,11 @@ const Home = () => {
       </div>
 
       <div className="mobile-quotation">
-          <div className="box-1">
-            <p>Quotation</p>
-          </div>
-          <div className="box-2"></div>
+        <div className="box-1">
+          <p>Quotation</p>
         </div>
+        <div className="box-2"></div>
+      </div>
     </div>
   );
 };

@@ -112,6 +112,10 @@ header {
   background-color: #ccc;
 }
 
+.mobile-menu{
+  display: none;
+}
+
 
 
 @media (max-width:800px) {
