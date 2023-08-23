@@ -285,16 +285,27 @@ const Home = () => {
               <div className="travel-listSection">
                 {travelData.map((item, index) => (
                   <div className="travel-list" key={index}>
-                    <button className="travelBox1">America</button>
-                    <button className="travelBox2">{item.fromDate}</button>
-                    <button className="travelBox3">{item.toDate}</button>
-                    <button className="travelBox4">{item.duration}</button>
-                    <button
+                       <div className="travelBox1">
+                        America
+                       </div>
+                       <div className="travelBox2">
+                        {item.fromDate}
+                       </div>
+                       <div className="travelBox3">
+                        {item.toDate}
+                       </div>
+                       <div className="travelBox4">
+                        {item.duration}
+                       </div>
+                    <div
                       className="travelBox5"
                       onClick={() => handleDeleteTravel(index)}
                     >
-                      <AiFillDelete />
-                    </button>
+                      <AiFillDelete
+                        size={20}
+                        style={{ color: "red", cursor: "pointer" }}
+                      />
+                    </div>
                   </div>
                 ))}
               </div>

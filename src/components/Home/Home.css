@@ -407,31 +407,30 @@
 }
 
 .travel-list {
-  margin-left: 21px;
-  margin-top: -22px;
+  margin-top: -21px;
+  display: flex;
+  margin-left: 20px;
 }
-.travel-list button {
-  height: auto;
-  background-color: #fff;
-  list-style: none;
-  border: 1px solid #bcbcbc;
-  text-align: start;
-  padding: 8px;
-}
+
 .travelBox1 {
-  width: 135px;
+  width: 133px;
+  border: 1px solid #bcbcbc;
 }
 .travelBox2 {
   width: 74px;
+  border: 1px solid #bcbcbc;
 }
 .travelBox3 {
-  width: 59px;
+  width: 56px;
+  border: 1px solid #bcbcbc;
 }
 .travelBox4 {
-  width: 85px;
+  width: 84px;
+  border: 1px solid #bcbcbc;
 }
 .travelBox5 {
-  width: 68px;
+  width: 65px;
+  border: 1px solid #bcbcbc;
 }
 
 @media (max-width: 800px) {
