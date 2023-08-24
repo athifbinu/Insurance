@@ -4,11 +4,12 @@ import Select from "react-select";
 import FlagData from "../../assets/Data/Country";
 import "./MultiDrop.css"
 
-export default function MultiDrop() {
+export default function MultiDrop({ onSelect }) {
   const [value, setValue] = useState([]);
 
   const handleChange = selectedOptions => {
     setValue(selectedOptions);
+    onSelect(selectedOptions);
   };
 
   return (

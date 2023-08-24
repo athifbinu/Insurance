@@ -72,6 +72,7 @@ const Home = () => {
     setPhoneNumbers(updatedPhoneNumbers);
   };
 
+
   const [travelData, setTravelData] = useState([]);
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
@@ -235,7 +236,7 @@ const Home = () => {
             <div className="travel-right">
               <div>
                 <label htmlFor="destination">Destination(s)</label>
-                <MultiDrop />
+                <MultiDrop onSelect={handleSelect}/>
               </div>
 
               <div className="dateSection">
@@ -399,12 +400,12 @@ const Home = () => {
             <div className="name-section">
               <div>
                 <label>Passport No.</label>
-                <input type="text" />
+                <input type="number" />
               </div>
 
               <div>
                 <label>Date Of Birth</label>
-                <input type="text" />
+                <input type="date" />
               </div>
 
               {showFamily && (

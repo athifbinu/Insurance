@@ -246,7 +246,6 @@
 }
 .name-section input {
   height: 25px;
-  font-size: 18px;
   width: 155px;
   border: 1px solid #bcbcbc;
   border-radius: 3px;
@@ -527,5 +526,8 @@
   }
   .number-box2 {
     margin-left: 122px;
+  }
+  .travel-list{
+    margin-left: auto;
   }
 }
