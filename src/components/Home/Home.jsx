@@ -77,6 +77,7 @@ const Home = () => {
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
   const [duration, setDuration] = useState("");
+  
 
   const handleAddTravel = () => {
     if (fromDate && toDate && duration) {
@@ -84,11 +85,13 @@ const Home = () => {
         fromDate,
         toDate,
         duration,
+    
       };
       setTravelData([...travelData, newTravel]);
       setFromDate("");
       setToDate("");
       setDuration("");
+    
     }
   };
 
@@ -96,6 +99,8 @@ const Home = () => {
     const updatedTravelData = travelData.filter((_, i) => i !== index);
     setTravelData(updatedTravelData);
   };
+
+  
 
   return (
     <div className="home-section">
@@ -236,7 +241,7 @@ const Home = () => {
             <div className="travel-right">
               <div>
                 <label htmlFor="destination">Destination(s)</label>
-                <MultiDrop onSelect={handleSelect}/>
+                <MultiDrop/>
               </div>
 
               <div className="dateSection">
@@ -287,7 +292,7 @@ const Home = () => {
                 {travelData.map((item, index) => (
                   <div className="travel-list" key={index}>
                        <div className="travelBox1">
-                        America
+                          germany
                        </div>
                        <div className="travelBox2">
                         {item.fromDate}
