@@ -409,7 +409,11 @@ const Home = () => {
                 ) : (
                   <label>Last Name</label>
                 )}
-                <input type="text" />
+                <input
+                  type="text"
+                  value={LastName}
+                  onChange={(e) => SetLastName(e.target.value)}
+                />
               </div>
 
               {showMale && (
@@ -477,8 +481,13 @@ const Home = () => {
                       <div className="beniBox">{data.Date}</div>
 
                       <div className="beniBoxIcon">
-                        <AiFillEdit size={20} color="green" />
+                        <AiFillEdit
+                          style={{ cursor: "pointer" }}
+                          size={20}
+                          color="green"
+                        />
                         <AiFillDelete
+                          style={{ cursor: "pointer" }}
                           size={20}
                           color="red"
                           onClick={(e) => deleteBenificiary(index)}
