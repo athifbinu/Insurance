@@ -430,6 +430,24 @@
   border: 1px solid #bcbcbc;
 }
 
+.list-data{
+  display: flex;
+  margin-top: -2px;
+}
+
+ .beniBox{
+  border: 1px solid #bcbcbc;
+  width: 162px;
+  padding: 3px;
+}
+.beniBoxIcon{
+  border: 1px solid #bcbcbc;
+  width: 77px;
+  text-align: center;
+  padding: 3px;
+}
+
+
 @media (max-width: 800px) {
   .d-none {
     display: none;

@@ -5,7 +5,7 @@ import { IoIosClose } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
 import Brazil from "../../assets/brazil.png";
-import { AiTwotoneDelete, AiFillDelete } from "react-icons/ai";
+import { AiTwotoneDelete, AiFillDelete, AiFillEdit } from "react-icons/ai";
 
 import Gold from "../GoldDrop/Gold";
 import CountryDrop from "../CountryDrop/CountryDrop";
@@ -72,12 +72,10 @@ const Home = () => {
     setPhoneNumbers(updatedPhoneNumbers);
   };
 
-
   const [travelData, setTravelData] = useState([]);
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
   const [duration, setDuration] = useState("");
-  
 
   const handleAddTravel = () => {
     if (fromDate && toDate && duration) {
@@ -85,13 +83,11 @@ const Home = () => {
         fromDate,
         toDate,
         duration,
-    
       };
       setTravelData([...travelData, newTravel]);
       setFromDate("");
       setToDate("");
       setDuration("");
-    
     }
   };
 
@@ -100,7 +96,32 @@ const Home = () => {
     setTravelData(updatedTravelData);
   };
 
-  
+  const [Firstname, setFirstname] = useState("");
+  const [LastName, SetLastName] = useState("");
+  const [Passport, setPassport] = useState("");
+  const [Date, setDate] = useState("");
+  const [Benificiary, setBenificiary] = useState([]);
+
+  const addBenifciary = () => {
+    if (Firstname && LastName && Passport && Date) {
+      const newBenificiary = {
+        Firstname,
+        LastName,
+        Passport,
+        Date,
+      };
+      setBenificiary([...Benificiary, newBenificiary]);
+      setFirstname("");
+      SetLastName("");
+      setPassport("");
+      setDate("");
+    }
+  };
+
+  const deleteBenificiary = (index) => {
+    const UpdatedBenificiarydata = Benificiary.filter((_, i) => i !== index);
+    setBenificiary(UpdatedBenificiarydata);
+  };
 
   return (
     <div className="home-section">
@@ -241,7 +262,7 @@ const Home = () => {
             <div className="travel-right">
               <div>
                 <label htmlFor="destination">Destination(s)</label>
-                <MultiDrop/>
+                <MultiDrop />
               </div>
 
               <div className="dateSection">
@@ -291,18 +312,10 @@ const Home = () => {
               <div className="travel-listSection">
                 {travelData.map((item, index) => (
                   <div className="travel-list" key={index}>
-                       <div className="travelBox1">
-                          germany
-                       </div>
-                       <div className="travelBox2">
-                        {item.fromDate}
-                       </div>
-                       <div className="travelBox3">
-                        {item.toDate}
-                       </div>
-                       <div className="travelBox4">
-                        {item.duration}
-                       </div>
+                    <div className="travelBox1">germany</div>
+                    <div className="travelBox2">{item.fromDate}</div>
+                    <div className="travelBox3">{item.toDate}</div>
+                    <div className="travelBox4">{item.duration}</div>
                     <div
                       className="travelBox5"
                       onClick={() => handleDeleteTravel(index)}
@@ -374,10 +387,15 @@ const Home = () => {
                 </div>
               </div>
             </div>
+
             <div className="name-section">
               <div>
                 <label>First Name</label>
-                <input type="text" />
+                <input
+                  type="text"
+                  value={Firstname}
+                  onChange={(e) => setFirstname(e.target.value)}
+                />
               </div>
 
               <div>
@@ -397,7 +415,11 @@ const Home = () => {
               {showMale && (
                 <div>
                   <label>Last Name</label>
-                  <input type="text" />
+                  <input
+                    type="text"
+                    value={LastName}
+                    onChange={(e) => SetLastName(e.target.value)}
+                  />
                 </div>
               )}
             </div>
@@ -405,32 +427,65 @@ const Home = () => {
             <div className="name-section">
               <div>
                 <label>Passport No.</label>
-                <input type="number" />
+                <input
+                  type="number"
+                  value={Passport}
+                  onChange={(e) => setPassport(e.target.value)}
+                />
               </div>
 
               <div>
                 <label>Date Of Birth</label>
-                <input type="date" />
+                <input
+                  type="date"
+                  value={Date}
+                  onChange={(e) => setDate(e.target.value)}
+                />
               </div>
 
               {showFamily && (
                 <div>
-                  <button>+ Add Beneficiary</button>
+                  <button onClick={addBenifciary}>+ Add Beneficiary</button>
                 </div>
               )}
             </div>
 
             {showFamily && (
-              <div className="beniForm-section">
-                <div className="beni-list">
-                  <button>First Name</button>
-                  <button>Last Name</button>
-                  <button>Date of Birth</button>
-                  <button>Passport No.</button>
+              <div>
+                <div className="beniForm-section">
+                  <div className="beni-list">
+                    <button>First Name</button>
+                    <button>Last Name</button>
+                    <button>Date of Birth</button>
+                    <button>Passport No.</button>
+                  </div>
+                  <div className="actions">
+                    <button>Actions</button>
+                    <AiTwotoneDelete size={15} className="action-icon" />
+                  </div>
                 </div>
-                <div className="actions">
-                  <button>Actions</button>
-                  <AiTwotoneDelete size={15} className="action-icon" />
+
+                <div className="benilist-section">
+                  {Benificiary.map((data, index) => (
+                    <div key={index} className="list-data">
+                      <div className="beniBox">{data.Firstname}</div>
+
+                      <div className="beniBox">{data.LastName}</div>
+
+                      <div className="beniBox">{data.Passport}</div>
+
+                      <div className="beniBox">{data.Date}</div>
+
+                      <div className="beniBoxIcon">
+                        <AiFillEdit size={20} color="green" />
+                        <AiFillDelete
+                          size={20}
+                          color="red"
+                          onClick={(e) => deleteBenificiary(index)}
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
