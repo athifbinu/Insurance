@@ -5,7 +5,8 @@ import { IoIosClose } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
 import Brazil from "../../assets/brazil.png";
-import { AiTwotoneDelete, AiFillDelete, AiFillEdit } from "react-icons/ai";
+import { AiTwotoneDelete, AiFillDelete, AiFillEdit,AiOutlineCheck } from "react-icons/ai";
+
 
 import Gold from "../GoldDrop/Gold";
 import CountryDrop from "../CountryDrop/CountryDrop";
@@ -121,6 +122,50 @@ const Home = () => {
   const deleteBenificiary = (index) => {
     const UpdatedBenificiarydata = Benificiary.filter((_, i) => i !== index);
     setBenificiary(UpdatedBenificiarydata);
+  };
+
+  const [editMode, setEditMode] = useState(false);
+  const [editIndex, setEditIndex] = useState(null);
+
+  const handleEditBeneficiary = (index) => {
+    const editedBeneficiary = Benificiary[index];
+    setFirstname(editedBeneficiary.Firstname);
+    SetLastName(editedBeneficiary.LastName);
+    setPassport(editedBeneficiary.Passport);
+    setDate(editedBeneficiary.Date);
+    setEditIndex(index);
+    setEditMode(true);
+  };
+
+  const handleSaveEdit = () => {
+    if (editIndex !== null) {
+      const updatedBeneficiary = {
+        Firstname,
+        LastName,
+        Passport,
+        Date,
+      };
+      const updatedBeneficiaries = [...Benificiary];
+      updatedBeneficiaries[editIndex] = updatedBeneficiary;
+      setBenificiary(updatedBeneficiaries);
+      setEditMode(false);
+      setEditIndex(null);
+      // Clear input fields
+      setFirstname("");
+      SetLastName("");
+      setPassport("");
+      setDate("");
+    }
+  };
+
+  const handleCancelEdit = () => {
+    setEditMode(false);
+    setEditIndex(null);
+    // Clear input fields
+    setFirstname("");
+    SetLastName("");
+    setPassport("");
+    setDate("");
   };
 
   return (
@@ -447,11 +492,26 @@ const Home = () => {
                 />
               </div>
 
-              {showFamily && (
-                <div>
-                  <button onClick={addBenifciary}>+ Add Beneficiary</button>
-                </div>
-              )}
+              <div>
+                {editMode ? (
+                  <div className="flex" style={{marginTop:"32px",gap:"7px"}}>
+                  
+                
+                   <div className="edit-section">
+                    <AiOutlineCheck size={15} style={{position:"absolute",color:"#fff"}}/>
+                   <button className="save-ben" onClick={handleSaveEdit}>Done</button>
+                   </div>
+                  
+                    <div className="edit-section">
+                      <IoIosClose size={20} style={{position:"absolute",color:"#fff"}}/>
+                    <button className="cancel-ben" onClick={handleCancelEdit}>Cancel</button>
+                    </div>
+                
+                  </div>
+                ) : (
+                  <button className="add-ben" onClick={addBenifciary}>+ Add Beneficiary</button>
+                )}
+              </div>
             </div>
 
             {showFamily && (
@@ -485,6 +545,7 @@ const Home = () => {
                           style={{ cursor: "pointer" }}
                           size={20}
                           color="green"
+                          onClick={() => handleEditBeneficiary(index)}
                         />
                         <AiFillDelete
                           style={{ cursor: "pointer" }}

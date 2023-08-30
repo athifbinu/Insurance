@@ -243,6 +243,7 @@
 .name-section {
   gap: 8px;
   display: flex;
+  align-items: center;
 }
 .name-section input {
   height: 25px;
@@ -255,7 +256,7 @@
   margin-bottom: 3px;
   font-weight: bold;
 }
-.name-section button {
+.add-ben{
   width: 155px;
   height: 25px;
   margin-top: 34px;
@@ -265,6 +266,8 @@
   border: none;
   border-radius: 3px;
 }
+
+
 
 .back-btn button {
   height: 26px;
@@ -445,6 +448,33 @@
   width: 77px;
   text-align: center;
   padding: 3px;
+}
+.edit-section{
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.edit-section button{
+  width: 75px;
+  height: 25px;
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffff;
+
+}
+
+.save-ben{
+  background-color: #1dc9b7;
+    border-color: #1dc9b7;
+  
+
+
+}
+.cancel-ben{
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 
 
